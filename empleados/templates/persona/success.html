@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Accion Exitosa
+{% endblock title %}
+
+{% block content %}
+    <h1>Registro guardado.</h1>
+    <button>
+        <a class="button primary" href="{% url 'persona_app:empleados_by_lista' %}">Volver</a>
+    </button>
+{% endblock content %}
+    

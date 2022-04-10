@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Registrar Empleado
+{% endblock title %}
+
+{% block content %}
+{% include "includes/header.html" %}
+ 
+ <div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell">Registrar Empleado</h1>
+        <form class="cell grid-x grid-margin-x" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="medium-6 cell">
+                <label>
+                    Nombres:
+                    {{ form.first_name }}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>
+                    Apellidos:
+                    {{ form.last_name }}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>
+                    Trabajo:
+                    {{ form.job }}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <label>
+                    Departamento:
+                    {{ form.departamento }}
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label>
+                    Habilidades:
+                    {{ form.habilidades }}
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                <label>
+                    Habilidades:
+                    {{ form.avatar }}
+                </label>
+            </div>
+            <div class="medium-6 cell">
+                <button class="button success" type="submit">Agregar</button>
+            </div>
+            <!--Puedo utilizar este atributo gracias a la CreateView-->
+        </form>
+    </div>
+</div>
+{% endblock content %}
+

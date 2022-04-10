@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}">
+</head>
+
+<!-- incluyendo el header desde otro archivo -->
+{% include 'home/common/header.html' %}
+
+<body>
+    <h1>Aqui va el contenido 1</h1>
+    <div class="grid-x">
+        <div class="cell callout secondary">
+            <h5>This is a callout</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quisquam unde excepturi repellendus veniam repellat provident exercitationem, perspiciatis amet distinctio aliquam, cumque deleniti natus iste doloribus, quo earum id fugiat.</p>
+            <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis numquam odio similique aperiam illum deserunt neque, dolorum dolore sunt at tenetur, reprehenderit quod, quis aut ratione vel laborum! Facere, sed?</a>
+        </div>
+
+    </div>
+</body>
+
+<!-- incluyendo el footer desde otro archivo -->
+{% include 'home/common/footer.html' %}
+
+</html>
